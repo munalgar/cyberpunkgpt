@@ -5,6 +5,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  Link,
 } from "react-router";
 
 import type { Route } from "./+types/root";
@@ -32,8 +33,23 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="bg-black">
         {children}
+        <footer className="p-4 bg-gray-900 border-t border-gray-800">
+          <div className="max-w-6xl mx-auto flex justify-between items-center">
+            <div className="text-gray-500 text-sm">
+              © {new Date().getFullYear()} CyberChat
+            </div>
+            <div>
+              <Link
+                to="/about"
+                className="text-gray-400 hover:text-cyan-500 transition-colors text-sm"
+              >
+                About
+              </Link>
+            </div>
+          </div>
+        </footer>
         <ScrollRestoration />
         <Scripts />
       </body>
