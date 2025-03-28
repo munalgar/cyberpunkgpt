@@ -38,7 +38,7 @@ export default function Home() {
 
           <div className="mt-8 flex justify-center">
             <Link
-              to="/characters"
+              to="/profile"
               className="bg-cyan-600 hover:bg-cyan-700 text-white py-3 px-6 rounded-md font-bold transition-colors"
             >
               Start Chatting
